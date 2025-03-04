@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hole in One - نادي الجولف الفاخر في البرتغال</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Hole in One Logo" class="site-logo">
+                </a>
+                <h1>Hole in One</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="about.html">عن النادي</a>
+                <a href="#facilities">المرافق</a>
+                <a href="#packages">الباقات</a>
+                <a href="#contact">اتصل بنا</a>
+                <button class="help-button" id="helpBtn">
+                    <i class="fas fa-question-circle"></i>
+                    المساعدة الخاصة
+                </button>
+                <button id="accessibility-btn" class="accessibility-button" title="تفعيل قارئ النص">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>مرحباً بكم في Hole in One</h1>
+                <p>تجربة جولف استثنائية في قلب البرتغال</p>
+                <div class="hero-buttons">
+                    <a href="#packages" class="cta-button">اكتشف باقاتنا</a>
+                    <a href="#facilities" class="cta-button">المرافق</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="facilities" class="facilities">
+            <h2>مرافقنا</h2>
+            <div class="facilities-grid">
+                <a href="golf-courses.html" class="facility-card">
+                    <div class="facility-image-container">
+                        <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="ملاعب الجولف" class="facility-image">
+                        <div class="facility-overlay">
+                            <i class="fas fa-golf-ball"></i>
+                            <h3>ملاعب الجولف</h3>
+                            <p>اكتشف ملاعبنا العالمية المستوى</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="digital-training.html" class="facility-card">
+                    <div class="facility-image-container">
+                        <img src="https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="التدريب الرقمي" class="facility-image">
+                        <div class="facility-overlay">
+                            <i class="fas fa-laptop"></i>
+                            <h3>التدريب الرقمي</h3>
+                            <p>تدريب متقدم باستخدام أحدث التقنيات</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="training.html" class="facility-card">
+                    <div class="facility-image-container">
+                        <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="التدريب" class="facility-image">
+                        <div class="facility-overlay">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>التدريب</h3>
+                            <p>دروس وتدريب رقمي متقدم</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="caddy-service.html" class="facility-card">
+                    <div class="facility-image-container">
+                        <img src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="خدمة حمل المعدات" class="facility-image">
+                        <div class="facility-overlay">
+                            <i class="fas fa-hands-helping"></i>
+                            <h3>خدمة حمل المعدات</h3>
+                            <p>مساعدين محترفين لتجربة لعب مثالية</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="restaurants.html" class="facility-card">
+                    <div class="facility-image-container">
+                        <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="المطاعم" class="facility-image">
+                        <div class="facility-overlay">
+                            <i class="fas fa-utensils"></i>
+                            <h3>المطاعم</h3>
+                            <p>تجربة طعام فريدة</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="accommodation.html" class="facility-card">
+                    <div class="facility-image-container">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="الإقامة" class="facility-image">
+                        <div class="facility-overlay">
+                            <i class="fas fa-hotel"></i>
+                            <h3>الإقامة</h3>
+                            <p>أجنحة وغرف فاخرة</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="packages" class="packages">
+            <h2>باقاتنا المميزة</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>الباقة الشاملة</h3>
+                    <ul>
+                        <li>5 ليالي في جناح فاخر</li>
+                        <li>5 جولات (18 حفرة)</li>
+                        <li>جولة مضمونة في ملعب سي فيو</li>
+                        <li>جلسة تدريب رقمية مجانية</li>
+                    </ul>
+                    <a href="#contact" class="book-button" data-package="الباقة الشاملة">احجز الآن</a>
+                </div>
+                <div class="package-card">
+                    <h3>Triple tee</h3>
+                    <ul>
+                        <li>ليلتان في غرفة مزدوجة</li>
+                        <li>3 جولات (18 حفرة)</li>
+                        <li>تأجير مجاني للعربات</li>
+                        <li>خصم 20% لمتجر المحترفين</li>
+                    </ul>
+                    <a href="#contact" class="book-button" data-package="Triple tee">احجز الآن</a>
+                </div>
+                <div class="package-card">
+                    <h3>استراحة استجمام</h3>
+                    <ul>
+                        <li>ليلة واحدة مع إفطار</li>
+                        <li>عشاء في مطاعم المنتجع</li>
+                        <li>الوصول إلى الملاعب</li>
+                        <li>تأجير نادي مجاني</li>
+                    </ul>
+                    <a href="#contact" class="book-button" data-package="استراحة استجمام">احجز الآن</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>اتصل بنا</h2>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <input type="text" placeholder="الاسم" required>
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <input type="tel" placeholder="رقم الهاتف" required>
+                    <select id="package-select" name="package" required>
+                        <option value="">اختر الباقة</option>
+                        <option value="الباقة الشاملة">الباقة الشاملة</option>
+                        <option value="Triple tee">Triple tee</option>
+                        <option value="استراحة استجمام">استراحة استجمام</option>
+                    </select>
+                    <textarea placeholder="رسالتك" required></textarea>
+                    <button type="submit" class="submit-button">إرسال</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hole in One</h3>
+                <p>تجربة جولف لا تُنسى في البرتغال</p>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p>البريد الإلكتروني: Ammar omar2008@gmail.com</p>
+                <p>الهاتف: +351 XXX XXX XXX</p>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text-to-speech functionality
+        const accessibilityBtn = document.getElementById('accessibility-btn');
+        let isSpeaking = false;
+        
+        accessibilityBtn.addEventListener('click', () => {
+            if (!isSpeaking) {
+                const textToRead = document.querySelector('main').textContent;
+                const speech = new SpeechSynthesisUtterance(textToRead);
+                speech.lang = 'ar';
+                speech.rate = 1.0;
+                
+                window.speechSynthesis.speak(speech);
+                isSpeaking = true;
+                accessibilityBtn.classList.add('active');
+                
+                speech.onend = () => {
+                    isSpeaking = false;
+                    accessibilityBtn.classList.remove('active');
+                };
+            } else {
+                window.speechSynthesis.cancel();
+                isSpeaking = false;
+                accessibilityBtn.classList.remove('active');
+            }
+        });
+    </script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

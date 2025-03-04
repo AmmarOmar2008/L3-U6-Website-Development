@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدفع - Hole in One</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .payment-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .payment-method {
+            padding: 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .payment-method:hover {
+            border-color: #4CAF50;
+            transform: translateY(-3px);
+        }
+        .payment-method i {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        .payment-method.selected {
+            border-color: #4CAF50;
+            background-color: #f0f9f0;
+        }
+        .booking-summary {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        .proceed-button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+            margin-top: 2rem;
+            transition: background 0.3s ease;
+        }
+        .proceed-button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Hole in One Logo" class="site-logo">
+                </a>
+                <h1>Hole in One</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="payment-container">
+            <h2>اختر طريقة الدفع</h2>
+            
+            <div class="booking-summary" id="booking-summary">
+                <!-- سيتم ملء هذا القسم بواسطة JavaScript -->
+            </div>
+
+            <div class="payment-methods">
+                <div class="payment-method" data-method="credit-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>بطاقة ائتمان</h3>
+                    <p>Visa, MasterCard, American Express</p>
+                </div>
+                
+                <div class="payment-method" data-method="paypal">
+                    <i class="fab fa-paypal"></i>
+                    <h3>PayPal</h3>
+                    <p>الدفع الآمن عبر PayPal</p>
+                </div>
+                
+                <div class="payment-method" data-method="bank-transfer">
+                    <i class="fas fa-university"></i>
+                    <h3>تحويل بنكي</h3>
+                    <p>الدفع عبر التحويل البنكي المباشر</p>
+                </div>
+            </div>
+
+            <button class="proceed-button" id="proceed-payment">متابعة الدفع</button>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // استرجاع بيانات الحجز
+            const bookingData = JSON.parse(localStorage.getItem('bookingData'));
+            
+            // عرض ملخص الحجز
+            const summaryHtml = `
+                <h3>ملخص الحجز</h3>
+                <p><strong>الاسم:</strong> ${bookingData.name}</p>
+                <p><strong>الباقة المختارة:</strong> ${bookingData.package}</p>
+            `;
+            document.getElementById('booking-summary').innerHTML = summaryHtml;
+
+            // التعامل مع اختيار طريقة الدفع
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            let selectedMethod = null;
+
+            paymentMethods.forEach(method => {
+                method.addEventListener('click', function() {
+                    paymentMethods.forEach(m => m.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedMethod = this.dataset.method;
+                });
+            });
+
+            // التعامل مع زر متابعة الدفع
+            document.getElementById('proceed-payment').addEventListener('click', function() {
+                if (!selectedMethod) {
+                    alert('الرجاء اختيار طريقة دفع');
+                    return;
+                }
+                
+                // هنا يمكنك إضافة المنطق الخاص بمعالجة الدفع
+                alert('سيتم توجيهك إلى صفحة الدفع الخاصة بـ ' + selectedMethod);
+            });
+        });
+    </script>
+</body>
+</html>

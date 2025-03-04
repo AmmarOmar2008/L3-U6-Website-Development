@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن Hole in One - نادي الجولف الفاخر</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Hole in One</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="#facilities">المرافق</a>
+                <a href="#packages">الباقات</a>
+                <a href="#contact">اتصل بنا</a>
+                <button id="accessibility-btn" class="accessibility-button" title="تفعيل قارئ النص">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <h1>مرحباً بكم في Hole in One</h1>
+                <p>وجهتكم المثالية لتجربة جولف لا تُنسى</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="about-section">
+                <h2>من نحن</h2>
+                <p>نحن في Hole in One نفخر بتقديم تجربة جولف استثنائية في قلب البرتغال. منذ تأسيسنا، حرصنا على توفير أعلى معايير الجودة في كل التفاصيل، من تصميم الملاعب إلى الخدمات المتميزة التي نقدمها لضيوفنا.</p>
+            </div>
+
+            <div class="about-features">
+                <div class="feature-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>خبرة عريقة</h3>
+                    <p>أكثر من 20 عاماً من الخبرة في مجال الجولف</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-star"></i>
+                    <h3>جودة عالمية</h3>
+                    <p>ملاعب مصممة وفق أعلى المعايير العالمية</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>فريق محترف</h3>
+                    <p>مدربون معتمدون وطاقم خدمة متميز</p>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2>رؤيتنا</h2>
+                <p>نسعى لأن نكون الوجهة المفضلة لعشاق الجولف في البرتغال، من خلال توفير تجربة متكاملة تجمع بين الرياضة والترفيه والراحة.</p>
+            </div>
+
+            <div class="about-facilities">
+                <h2>مرافقنا</h2>
+                <div class="facilities-grid">
+                    <div class="facility-item">
+                        <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="ملاعب الجولف">
+                        <h3>ملاعب عالمية</h3>
+                        <p>18 حفرة مصممة بعناية</p>
+                    </div>
+                    <div class="facility-item">
+                        <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="المطعم">
+                        <h3>مطعم فاخر</h3>
+                        <p>مأكولات عالمية وإطلالة رائعة</p>
+                    </div>
+                    <div class="facility-item">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="الإقامة">
+                        <h3>إقامة فاخرة</h3>
+                        <p>غرف وأجنحة مريحة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p><i class="fas fa-phone"></i> +351 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@holeinone.pt</p>
+                <p><i class="fas fa-map-marker-alt"></i> البرتغال، ألجارف</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hole in One. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Text-to-speech functionality
+        const accessibilityBtn = document.getElementById('accessibility-btn');
+        let isSpeaking = false;
+        
+        accessibilityBtn.addEventListener('click', () => {
+            if (!isSpeaking) {
+                const textToRead = document.querySelector('main').textContent;
+                const speech = new SpeechSynthesisUtterance(textToRead);
+                speech.lang = 'ar';
+                speech.rate = 1.0;
+                
+                window.speechSynthesis.speak(speech);
+                isSpeaking = true;
+                accessibilityBtn.classList.add('active');
+                
+                speech.onend = () => {
+                    isSpeaking = false;
+                    accessibilityBtn.classList.remove('active');
+                };
+            } else {
+                window.speechSynthesis.cancel();
+                isSpeaking = false;
+                accessibilityBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التدريب الرقمي - Hole in One</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Hole in One</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">عن النادي</a>
+                <a href="#facilities">المرافق</a>
+                <a href="#packages">الباقات</a>
+                <a href="#contact">اتصل بنا</a>
+                <button class="help-button" id="helpBtn">
+                    <i class="fas fa-question-circle"></i>
+                    المساعدة الخاصة
+                </button>
+                <button id="accessibility-btn" class="accessibility-button" title="تفعيل قارئ النص">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="digital-training-hero">
+            <div class="hero-content">
+                <h1>التدريب الرقمي</h1>
+                <p>تدريب متقدم باستخدام أحدث التقنيات</p>
+            </div>
+        </section>
+
+        <section class="digital-training-features">
+            <div class="features-container">
+                <div class="feature-card">
+                    <i class="fas fa-vr-cardboard"></i>
+                    <h3>تقنية الواقع الافتراضي</h3>
+                    <p>تدرب على ضربات الجولف في بيئة افتراضية متطورة</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>تحليل الأداء</h3>
+                    <p>تحليل متقدم لأدائك باستخدام الذكاء الاصطناعي</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>تطبيق متابعة التقدم</h3>
+                    <p>تابع تقدمك وتدرب من أي مكان عبر تطبيقنا</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="training-details">
+            <div class="details-container">
+                <h2>مميزات التدريب الرقمي</h2>
+                <ul class="features-list">
+                    <li>تحليل حركة الجسم بتقنية ثلاثية الأبعاد</li>
+                    <li>تدريب شخصي مخصص حسب مستواك</li>
+                    <li>تقارير أداء مفصلة وتوصيات للتحسين</li>
+                    <li>جلسات تدريب افتراضية مع مدربين محترفين</li>
+                    <li>محاكاة لملاعب جولف عالمية</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="booking-container">
+                <h2>احجز جلستك التدريبية</h2>
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="name">الاسم</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="session-type">نوع الجلسة</label>
+                        <select id="session-type" required>
+                            <option value="">اختر نوع الجلسة</option>
+                            <option value="vr">تدريب واقع افتراضي</option>
+                            <option value="analysis">تحليل أداء</option>
+                            <option value="combined">جلسة متكاملة</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">احجز الآن</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hole in One</h3>
+                <p>تجربة جولف لا تُنسى في البرتغال</p>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p>البريد الإلكتروني: info@holeinone.pt</p>
+                <p>الهاتف: +351 XXX XXX XXX</p>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Text-to-speech functionality
+        const accessibilityBtn = document.getElementById('accessibility-btn');
+        let isSpeaking = false;
+        
+        accessibilityBtn.addEventListener('click', () => {
+            if (!isSpeaking) {
+                const textToRead = document.querySelector('main').textContent;
+                const speech = new SpeechSynthesisUtterance(textToRead);
+                speech.lang = 'ar';
+                speech.rate = 1.0;
+                
+                window.speechSynthesis.speak(speech);
+                isSpeaking = true;
+                accessibilityBtn.classList.add('active');
+                
+                speech.onend = () => {
+                    isSpeaking = false;
+                    accessibilityBtn.classList.remove('active');
+                };
+            } else {
+                window.speechSynthesis.cancel();
+                isSpeaking = false;
+                accessibilityBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

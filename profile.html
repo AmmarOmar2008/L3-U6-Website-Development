@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملف تعريف - Hole in One</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Hole in One</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">من نحن</a>
+                <a href="#facilities">المرافق</a>
+                <a href="#contact">اتصل بنا</a>
+                <button id="accessibility-btn" class="accessibility-button" title="تفعيل قارئ النص">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="guide-hero">
+            <div class="guide-hero-content">
+                <h1>ملف تعريف الموقع</h1>
+                <p>تعرف على موقعنا وخدماتنا</p>
+            </div>
+        </section>
+
+        <section class="guide-content">
+            <div class="guide-section">
+                <h2>مميزات الموقع</h2>
+                <div class="features-grid">
+                    <div class="guide-feature">
+                        <i class="fas fa-universal-access"></i>
+                        <h3>سهولة الوصول</h3>
+                        <p>موقعنا مصمم ليناسب جميع المستخدمين، بما في ذلك ذوي الاحتياجات الخاصة</p>
+                        <div class="feature-details">
+                            <ul>
+                                <li>قارئ نصوص مدمج</li>
+                                <li>تباين ألوان واضح</li>
+                                <li>خطوط سهلة القراءة</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="guide-feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>تصميم متجاوب</h3>
+                        <p>يعمل الموقع بشكل مثالي على جميع الأجهزة</p>
+                        <div class="feature-details">
+                            <ul>
+                                <li>هواتف ذكية</li>
+                                <li>أجهزة لوحية</li>
+                                <li>أجهزة الكمبيوتر</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="guide-feature">
+                        <i class="fas fa-language"></i>
+                        <h3>دعم اللغة العربية</h3>
+                        <p>واجهة كاملة باللغة العربية</p>
+                        <div class="feature-details">
+                            <ul>
+                                <li>محتوى عربي أصيل</li>
+                                <li>اتجاه النص من اليمين لليسار</li>
+                                <li>خطوط عربية جميلة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-section">
+                <h2>كيفية استخدام الموقع</h2>
+                <div class="usage-steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>الصفحة الرئيسية</h3>
+                        <p>تصفح العروض والمرافق المتاحة في نادينا</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>استكشاف المرافق</h3>
+                        <p>اطلع على تفاصيل ملاعب الجولف والمرافق المتوفرة</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>الباقات والحجز</h3>
+                        <p>اختر الباقة المناسبة واحجز موعدك</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-section">
+                <h2>روابط مهمة</h2>
+                <div class="important-links">
+                    <a href="index.html" class="guide-link">
+                        <i class="fas fa-home"></i>
+                        <span>الصفحة الرئيسية</span>
+                    </a>
+                    <a href="about.html" class="guide-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>من نحن</span>
+                    </a>
+                    <a href="golf-courses.html" class="guide-link">
+                        <i class="fas fa-golf-ball"></i>
+                        <span>ملاعب الجولف</span>
+                    </a>
+                    <a href="#contact" class="guide-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>اتصل بنا</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p><i class="fas fa-phone"></i> +351 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@holeinone.pt</p>
+                <p><i class="fas fa-map-marker-alt"></i> البرتغال، ألجارف</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hole in One. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Text-to-speech functionality
+        const accessibilityBtn = document.getElementById('accessibility-btn');
+        let isSpeaking = false;
+        
+        accessibilityBtn.addEventListener('click', () => {
+            if (!isSpeaking) {
+                const textToRead = document.querySelector('main').textContent;
+                const speech = new SpeechSynthesisUtterance(textToRead);
+                speech.lang = 'ar';
+                speech.rate = 1.0;
+                
+                window.speechSynthesis.speak(speech);
+                isSpeaking = true;
+                accessibilityBtn.classList.add('active');
+                
+                speech.onend = () => {
+                    isSpeaking = false;
+                    accessibilityBtn.classList.remove('active');
+                };
+            } else {
+                window.speechSynthesis.cancel();
+                isSpeaking = false;
+                accessibilityBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
